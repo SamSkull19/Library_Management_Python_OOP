@@ -67,7 +67,16 @@ def borrow_book(book_id):
         book.borrow_book()
     else:
         print(f"Error: Book ID {book_id} not found.")
-        
+
+def return_book(book_id):
+    book = books.get_book_by_id(book_id)
+   
+    if book:
+        book.return_book()
+    else:
+        print(f"Error: Book ID {book_id} not found.")
+
+
 print(books.book_list)
 
 for book in books.book_list:
