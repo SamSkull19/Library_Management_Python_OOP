@@ -27,12 +27,19 @@ class Book:
     def __repr__(self):
         return f"Book ID : {self.book_id} | Book Title : {self.title} | Book Author : {self.author} | Book Availability : {self.availability}"
    
+   
 class Library:
     book_list = []
 
     def entry_book(self, book):
         self.book_list.append(book)
 
+    def get_book_by_id(self, book_id):
+        for book in self.book_list:
+            if book.book_id == book_id:
+                return book
+        return None
+    
 
 books = Library()
 book1 = Book(1, "1984", "Orwell", True)
