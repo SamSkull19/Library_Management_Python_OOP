@@ -17,12 +17,25 @@ class Library:
 
 
 books = Library()
-book1 = Book(2, "Mockingbird", "Harper", False)
-book2 = Book(3, "Gatsby", "Fitzgerald", True)
+book1 = Book(1, "1984", "Orwell", True)
+book2 = Book(2, "Mockingbird", "Harper", False)
+book3 = Book(3, "Gatsby", "Fitzgerald", True)
+book4 = Book(4, "Florence", "Gerald", True)
+book5 = Book(5, "Franco", "Issac", False)
+book6 = Book(6, "Jungle", "James", True)
+book7 = Book(7, "Trunk", "Mary", True)
+book8 = Book(8, "House", "Carl", False)
 
 books.entry_book(book1)
 books.entry_book(book2)
+books.entry_book(book3)
+books.entry_book(book4)
+books.entry_book(book5)
+books.entry_book(book6)
+books.entry_book(book7)
+books.entry_book(book8)
 
-print(book1)
-print(book2)
 print(books.book_list)
+
+for book in books.book_list:
+    print(book)
