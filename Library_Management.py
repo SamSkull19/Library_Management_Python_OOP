@@ -13,6 +13,14 @@ class Book:
         else:
             print(f"{self._title} is already borrowed and not available.")
 
+    def return_book(self):
+        if not self.__availability:
+            self.__availability = True
+            print(f"{self._title} has been returned.")
+       
+        else:
+            print(f"{self._title} is already available and not borrowed.")
+
     def __repr__(self):
         return f"Book ID : {self.book_id} | Book Title : {self.title} | Book Author : {self.author} | Book Availability : {self.availability}"
    
