@@ -21,6 +21,9 @@ class Book:
         else:
             print(f"{self._title} is already available and not borrowed.")
 
+    def view_book_info(self):
+        return f"Book ID : {self.__book_id} | Book Title : {self._title} | Book Author : {self._author} | Book Availability : {self.__availability}"
+
     def __repr__(self):
         return f"Book ID : {self.book_id} | Book Title : {self.title} | Book Author : {self.author} | Book Availability : {self.availability}"
    
