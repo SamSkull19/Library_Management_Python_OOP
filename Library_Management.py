@@ -5,6 +5,13 @@ class Book:
         self.author = author
         self.availability = availability
 
+    def borrow_book(self):
+        if self.__availability:
+            self.__availability = False
+            print(f"{self._title} has been borrowed.")
+       
+        else:
+            print(f"{self._title} is already borrowed and not available.")
 
     def __repr__(self):
         return f"Book ID : {self.book_id} | Book Title : {self.title} | Book Author : {self.author} | Book Availability : {self.availability}"
