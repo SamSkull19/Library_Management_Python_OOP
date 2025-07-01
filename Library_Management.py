@@ -1,10 +1,13 @@
 class Book:
-    def __init__(self, book_id, book_name):
+    def __init__(self, book_id, title, author, availability):
         self.book_id = book_id
-        self.book_name = book_name
+        self.title = title
+        self.author = author
+        self.availability = availability
+
 
     def __repr__(self):
-        return f"Book ID : {self.book_id} | Book Title : {self.book_name}"
+        return f"Book ID : {self.book_id} | Book Title : {self.title} | Book Author : {self.author} | Book Availability : {self.availability}"
    
 class Library:
     book_list = []
@@ -14,8 +17,8 @@ class Library:
 
 
 books = Library()
-book1 = Book(1, "Prince")
-book2 = Book(2, "Fault")
+book1 = Book(2, "Mockingbird", "Harper", False)
+book2 = Book(3, "Gatsby", "Fitzgerald", True)
 
 books.entry_book(book1)
 books.entry_book(book2)
