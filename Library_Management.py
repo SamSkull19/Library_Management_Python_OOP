@@ -76,7 +76,11 @@ def return_book(book_id):
     else:
         print(f"Error: Book ID {book_id} not found.")
 
+def view_book_info():
+    for book in Library.book_list:
+        print(book.view_book_info())
 
+        
 print(books.book_list)
 
 for book in books.book_list:
