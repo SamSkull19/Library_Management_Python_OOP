@@ -27,7 +27,7 @@ class Book:
     def __repr__(self):
         return f"Book ID : {self.book_id} | Book Title : {self.title} | Book Author : {self.author} | Book Availability : {self.availability}"
    
-   
+
 class Library:
     book_list = []
 
@@ -60,6 +60,14 @@ books.entry_book(book6)
 books.entry_book(book7)
 books.entry_book(book8)
 
+def borrow_book(book_id):
+    book = books.get_book_by_id(book_id)
+   
+    if book:
+        book.borrow_book()
+    else:
+        print(f"Error: Book ID {book_id} not found.")
+        
 print(books.book_list)
 
 for book in books.book_list:
